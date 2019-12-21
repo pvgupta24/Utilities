@@ -1,0 +1,63 @@
+<!-- Use http://premailer.io to convert CSS blocks into inline style attributes for HTML emails-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        @font-face {
+            font-family: 'Inconsolata';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url('https://fonts.gstatic.com/s/inconsolata/v18/QldKNThLqRwH-OJ1UHjlKGlZ5q0.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Inconsolata';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Inconsolata Bold'), local('Inconsolata-Bold'), url('https://fonts.gstatic.com/s/inconsolata/v18/QldXNThLqRwH-OJ1UHjlKGHiw71p5_k.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Inconsolata;
+        }
+
+        @media screen and (max-width: 600px) {
+            .header h2 {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body style="font-family: Inconsolata; margin: 0; padding: 0;">
+    <div class="container" style="margin: 0;">
+        <div class="content" style="background-color: #FEE856; padding: 50px;">
+            <h2 style="margin-top: 10px;">Hey <%=template_name%>!!</h2>
+            <p>We are happy to inform you that you have successfully completed the project. Your mentors have rated your
+                work highly and they have attached a word for you.</p>
+            <div style="padding: 20px;">
+                <div style="width: 70%; margin: 0 auto; padding: 10px; border: 1px solid grey;">
+                    <p><%=template_message%></p>
+                </div>
+            </div>
+            <p>We hope you will continue to work with the same amount of zeal and enthusiasm you have shown till now and
+                will help complete this project successfully.
+                Best of Luck!!</p>
+            <br>
+            <p>Regards</p>
+            <p>Team</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
